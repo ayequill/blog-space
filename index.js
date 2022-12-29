@@ -37,7 +37,8 @@ document.getElementById("newPost").addEventListener("submit", (e) => {
     .then((data) => {
         // add the new obj to our array and rendering it with the updated values
       postArray.unshift(data);
-
+      document.getElementById("postTitle").value = ''
+      document.getElementById("postBody").value = ''
       renderPosts();
     });
 });
